@@ -1,4 +1,4 @@
-# jQuery Skinswitcher [![Build Status](https://secure.travis-ci.org/cleentfaar/jquery-skinswitcher.png?branch=master)](https://travis-ci.org/cleentfaar/jquery-skinswitcher)
+# jQuery Skinswitcher [![Build Status](https://travis-ci.org/cleentfaar/jquery-skinswitcher.png?branch=master)](http://travis-ci.org/cleentfaar/jquery-skinswitcher)
 
 ### A Jquery plugin to simplify the switching of stylesheets (skins) by the user, thereby changing the primary colors of the website
 
