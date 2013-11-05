@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Skinswitcher</title>
+        <link rel="stylesheet" href="skins/no-skin.css" id="SkinswitcherTarget">
+        <link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+        <div class="dropdown" id="Skinswitcher">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-eye"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="#" data-filename="blue.css"><span class="skincolor-blue"></span> Blue</a></li>
+                <li><a href="#" data-filename="white.css"><span class="skincolor-white"></span> White</a></li>
+                <li><a href="#" data-filename="no-skin.css"><i class="skincolor-none"></i> None</a></li>
+            </ul>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js" type="text/javascript"></script>
+        <script src="../src/jquery.skinswitcher.js" type="text/javascript"></script>
+		<script>
+			$(function() {
+				$("#Skinswitcher").skinswitcher({
+					debug: true
+				});
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+{
+	"name": "skinswitcher",
+	"title": "jQuery Skinswitcher",
+	"description": "A plugin to ease the switching of skins on a website by the user",
+	"keywords": [
+		"jquery",
+		"skinswitcher",
+		"plugins"
+	],
+	"version": "0.0.1",
+	"author": {
+		"name": "Cas Leentfaar",
+		"email": "info@casleentfaar.com",
+		"url": "https://github.com/cleentfaar"
+	},
+	"maintainers": [
+		{
+			"name": "Cas Leentfaar",
+			"email": "info@casleentfaar.com",
+			"url": "https://github.com/cleentfaar"
+		}
+	],
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://cleentfaar.mit-license.org/"
+		}
+	],
+	"bugs": "https://github.com/cleentfaar/skinswitcher/issues",
+	"homepage": "http://github.com/cleentfaar",
+	"docs": "https://github.com/cleentfaar/jquery-skinswitcher#readme",
+	"download": "https://github.com/cleentfaar/jquery-skinswitcher/archive/master.zip",
+	"dependencies": {
+		"jquery": ">=1.4"
+	}
+}
