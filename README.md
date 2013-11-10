@@ -1,4 +1,4 @@
-# jQuery Skinswitcher [![Build Status](https://travis-ci.org/cleentfaar/jquery-skinswitcher.png?branch=master)](https://travis-ci.org/cleentfaar/jquery-skinswitcher)
+# jQuery Skinswitcher [![Build Status](https://travis-ci.org/cleentfaar/jquery-skinswitcher.png?branch=master)](http://travis-ci.org/cleentfaar/jquery-skinswitcher)
 
 A plugin to ease the switching of skins on a website by the user.
 
