@@ -47,7 +47,7 @@
             var settings = this.settings;
             var $target = $(settings.stylesheetTarget);
             if ($target.length !== 1) {
-                writeLog('Could not find the stylesheet target ('+settings.stylesheetTarget+')');
+                this.writeLog('Could not find the stylesheet target ('+settings.stylesheetTarget+')');
                 return;
             }
             this.$element.addClass('skinswitcher');
@@ -55,10 +55,10 @@
             var currentSelector = '['+settings.urlAttribute+'$="'+currentFile+'"]';
             $(settings.children+currentSelector, this.$element).addClass('current');
             $(settings.children, this.$element).each(function() {
-                writeLog('Grabbing value from child attribute '+settings.urlAttribute);
+                this.writeLog('Grabbing value from child attribute '+settings.urlAttribute);
                 var attributeValue = $(this).attr(settings.urlAttribute);
                 if (attributeValue === undefined) {
-                    writeLog('No "'+settings.urlAttribute+'" attribute set for child with text "'+$(this).text()+'"');
+                    this.writeLog('No "'+settings.urlAttribute+'" attribute set for child with text "'+$(this).text()+'"');
                 } else {
                     $(this).click(function(event) {
                         $(settings.children, this.$element).removeClass('current');
@@ -67,12 +67,12 @@
                         var newFile = attributeValue;
                         var newHref = $target.attr('href').replace(currentFile, newFile);
                         $target.attr('href', newHref);
-                        writeLog('Changing current stylesheet from '+currentFile+' to '+newFile);
+                        this.writeLog('Changing current stylesheet from '+currentFile+' to '+newFile);
                         currentFile = newFile;
                     });
                 }
             });
-            writeLog('Successfully intitiated the skinwitcher');
+            this.writeLog('Successfully intitiated the skinwitcher');
         },
         basename: function(path) {
             return path.replace(/\\/g,'/').replace( /.*\//, '' );
