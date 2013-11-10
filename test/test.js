@@ -37,25 +37,25 @@
         module('Skinswitcher API', { teardown: teardown });
 
         test('skinswitcher instance', function() {
-            var skinswitcher = $('#Skinswitcher').skinswitcher(),
-                instance = $.data($('#Skinswitcher'), 'plugin_skinswitcher');
+            $('#Skinswitcher').skinswitcher();
+            var instance = $.data($('#Skinswitcher'), 'plugin_skinswitcher');
             ok(typeof instance !== 'undefined', 'Get access to the instance object.');
         });
 
         test('skinswitcher destroy', function() {
             var skinswitcher = $('#Skinswitcher').skinswitcher();
             ok($.data($('#Skinswitcher'), 'plugin_skinswitcher') !== null, 'Skinswitcher instance exists.');
-            skinswitcher.skinswitcher().destroy();
+            skinswitcher.destroy();
             ok($.data($('#Skinswitcher'), 'plugin_skinswitcher') === null, 'Skinswitcher instance no longer exists.');
         });
 
         module('Skinswitcher Options', { teardown: teardown });
 
         test('children', function() {
-            var skinswitcher, instance;
-            skinswitcher = $('#Skinswitcher').skinswitcher({ children:'div a' });
-            instance = $.data($('#Skinswitcher'), 'plugin_skinswitcher');
-
+            $('#Skinswitcher').skinswitcher({
+                'children': 'div a'
+            });
+            var instance = $.data($('#Skinswitcher'), 'plugin_skinswitcher');
             ok(instance.options.children === 'div a', 'children selector was properly set to "div a".');
         });
 
