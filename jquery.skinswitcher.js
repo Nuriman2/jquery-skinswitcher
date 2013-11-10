@@ -47,9 +47,7 @@
             var settings = this.settings;
             var $target = $(settings.stylesheetTarget);
             if ($target.length !== 1) {
-                if (settings.debug === true) {
-                    console.log('Could not find the stylesheet target ('+settings.stylesheetTarget+')');
-                }
+                writeLog('Could not find the stylesheet target ('+settings.stylesheetTarget+')');
                 return;
             }
             this.$element.addClass('skinswitcher');
@@ -57,14 +55,10 @@
             var currentSelector = '['+settings.urlAttribute+'$="'+currentFile+'"]';
             $(settings.children+currentSelector, this.$element).addClass('current');
             $(settings.children, this.$element).each(function() {
-                if (settings.debug === true) {
-                    console.log('Grabbing value from child attribute '+settings.urlAttribute);
-                }
+                writeLog('Grabbing value from child attribute '+settings.urlAttribute);
                 var attributeValue = $(this).attr(settings.urlAttribute);
                 if (attributeValue === undefined) {
-                    if (settings.debug === true) {
-                        console.log('No "'+settings.urlAttribute+'" attribute set for child with text "'+$(this).text()+'"');
-                    }
+                    writeLog('No "'+settings.urlAttribute+'" attribute set for child with text "'+$(this).text()+'"');
                 } else {
                     $(this).click(function(event) {
                         $(settings.children, this.$element).removeClass('current');
@@ -73,19 +67,24 @@
                         var newFile = attributeValue;
                         var newHref = $target.attr('href').replace(currentFile, newFile);
                         $target.attr('href', newHref);
-                        if (settings.debug === true) {
-                            console.log('Changing current stylesheet from '+currentFile+' to '+newFile);
-                        }
+                        writeLog('Changing current stylesheet from '+currentFile+' to '+newFile);
                         currentFile = newFile;
                     });
                 }
             });
-            if (settings.debug === true) {
-                console.log('Successfully intitiated the skinwitcher');
-            }
+            writeLog('Successfully intitiated the skinwitcher');
         },
         basename: function(path) {
             return path.replace(/\\/g,'/').replace( /.*\//, '' );
+        },
+        writeLog: function(message) {
+            if (this.settings.debug === true) {
+                if (console !== undefined) {
+                    console.log(message);
+                } else {
+                    return;
+                }
+            }
         }
     };
 
