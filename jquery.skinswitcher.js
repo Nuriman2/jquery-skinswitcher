@@ -8,7 +8,6 @@
  */
 // the semi-colon before function invocation is a safety net against concatenated
 // scripts and/or other plugins which may not be closed properly.
-;
 (function ($, window, document, undefined) {
 
     // undefined is used here as the undefined global variable in ECMAScript 3 is
@@ -21,11 +20,11 @@
     // minified (especially when both are regularly referenced in your plugin).
 
     // Create the defaults once
-    var pluginName = "skinswitcher",
+    var pluginName = 'skinswitcher',
         defaults = {
-            children: "li a",
-            urlAttribute: "data-filename",
-            stylesheetTarget: "#SkinswitcherTarget",
+            children: 'li a',
+            urlAttribute: 'data-filename',
+            stylesheetTarget: '#SkinswitcherTarget',
             debug: false
         };
 
@@ -48,23 +47,22 @@
             var settings = this.settings;
             var $target = $(settings.stylesheetTarget);
             if ($target.length !== 1) {
-                if (settings.debug == true) {
-                    console.log("Could not find the stylesheet target ("+settings.stylesheetTarget+")");
+                if (settings.debug === true) {
+                    console.log('Could not find the stylesheet target ('+settings.stylesheetTarget+')');
                 }
                 return;
             }
             this.$element.addClass('skinswitcher');
             var currentFile = this.basename($target.attr('href'));
             var currentSelector = '['+settings.urlAttribute+'$="'+currentFile+'"]';
-            console.log(currentSelector+' vs '+currentFile);
             $(settings.children+currentSelector, this.$element).addClass('current');
             $(settings.children, this.$element).each(function() {
-                if (settings.debug == true) {
+                if (settings.debug === true) {
                     console.log('Grabbing value from child attribute '+settings.urlAttribute);
                 }
                 var attributeValue = $(this).attr(settings.urlAttribute);
                 if (attributeValue === undefined) {
-                    if (settings.debug == true) {
+                    if (settings.debug === true) {
                         console.log('No "'+settings.urlAttribute+'" attribute set for child with text "'+$(this).text()+'"');
                     }
                 } else {
@@ -75,14 +73,14 @@
                         var newFile = attributeValue;
                         var newHref = $target.attr('href').replace(currentFile, newFile);
                         $target.attr('href', newHref);
-                        if (settings.debug == true) {
+                        if (settings.debug === true) {
                             console.log('Changing current stylesheet from '+currentFile+' to '+newFile);
                         }
                         currentFile = newFile;
                     });
                 }
             });
-            if (settings.debug == true) {
+            if (settings.debug === true) {
                 console.log('Successfully intitiated the skinwitcher');
             }
         },
@@ -95,8 +93,8 @@
     // preventing against multiple instantiations
     $.fn[ pluginName ] = function (options) {
         return this.each(function () {
-            if (!$.data(this, "plugin_" + pluginName)) {
-                $.data(this, "plugin_" + pluginName, new Plugin(this, options));
+            if (!$.data(this, 'plugin_' + pluginName)) {
+                $.data(this, 'plugin_' + pluginName, new Plugin(this, options));
             }
         });
     };
