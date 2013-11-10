@@ -1,0 +1,8 @@
+/**
+ * This stylesheet represents WHITE colors being applied to the template
+ * A variation of these files work well with the Skinswitcher Jquery plugin
+ */
+.navbar,
+.side-nav {
+    background-color: #FFFFFF;
+}
