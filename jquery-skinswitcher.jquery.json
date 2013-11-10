@@ -2,7 +2,7 @@
     "name": "jquery-skinswitcher",
     "title": "jQuery Skinswitcher",
     "description": "A plugin to ease the switching of skins on a website by the user.",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "homepage": "http://github.com/cleentfaar/jquery-skinswitcher/",
     "author": {
         "name": "Cas Leentfaar",
@@ -27,7 +27,7 @@
         }
     ],
     "dependencies": {
-        "jquery": ">= 1.10.1"
+        "jquery": "~1.10.1"
     },
     "devDependencies": {
         "grunt": "~0.4.1",
