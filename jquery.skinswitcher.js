@@ -44,30 +44,30 @@
 
     Plugin.prototype = {
         init: function () {
-            var settings = this.settings;
-            var $target = $(settings.stylesheetTarget);
+            var self = this;
+            var $target = $(self.settings.stylesheetTarget);
             if ($target.length !== 1) {
-                this.writeLog('Could not find the stylesheet target ('+settings.stylesheetTarget+')');
+                this.writeLog('Could not find the stylesheet target ('+self.settings.stylesheetTarget+')');
                 return;
             }
             this.$element.addClass('skinswitcher');
             var currentFile = this.basename($target.attr('href'));
-            var currentSelector = '['+settings.urlAttribute+'$="'+currentFile+'"]';
-            $(settings.children+currentSelector, this.$element).addClass('current');
-            $(settings.children, this.$element).each(function() {
-                this.writeLog('Grabbing value from child attribute '+settings.urlAttribute);
-                var attributeValue = $(this).attr(settings.urlAttribute);
+            var currentSelector = '['+self.settings.urlAttribute+'$="'+currentFile+'"]';
+            $(self.settings.children+currentSelector, this.$element).addClass('current');
+            $(self.settings.children, this.$element).each(function() {
+                self.writeLog('Grabbing value from child attribute '+self.settings.urlAttribute);
+                var attributeValue = $(this).attr(self.settings.urlAttribute);
                 if (attributeValue === undefined) {
-                    this.writeLog('No "'+settings.urlAttribute+'" attribute set for child with text "'+$(this).text()+'"');
+                    self.writeLog('No "'+self.settings.urlAttribute+'" attribute set for child with text "'+$(this).text()+'"');
                 } else {
                     $(this).click(function(event) {
-                        $(settings.children, this.$element).removeClass('current');
+                        $(self.settings.children, this.$element).removeClass('current');
                         $(this).addClass('current');
                         event.preventDefault();
                         var newFile = attributeValue;
                         var newHref = $target.attr('href').replace(currentFile, newFile);
                         $target.attr('href', newHref);
-                        this.writeLog('Changing current stylesheet from '+currentFile+' to '+newFile);
+                        self.writeLog('Changing current stylesheet from '+currentFile+' to '+newFile);
                         currentFile = newFile;
                     });
                 }
