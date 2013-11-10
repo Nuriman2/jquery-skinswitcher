@@ -56,7 +56,7 @@
                 'children': 'div a'
             });
             var instance = $.data($('#Skinswitcher'), 'plugin_skinswitcher');
-            ok(instance.options.children === 'div a', 'children selector was properly set to "div a".');
+            ok(instance.settings.children === 'div a', 'children selector was properly set to "div a".');
         });
 
 
@@ -64,15 +64,14 @@
 
         test('opened/closed', function() {
             var skinswitcher = $('#Skinswitcher').skinswitcher(),
-                instance = $.data($('#Skinswitcher'), 'plugin_skinswitcher'),
-                expected = 8;
+                expected = 1;
 
             expect(expected);
             stop();
 
             system.queue('test', []);
             system.queue('test', function(next) {
-                ok(instance.closed(), 'Skinswitcher starts closed.');
+                ok(skinswitcher.closed(), 'Skinswitcher starts closed.');
                 skinswitcher.focus();
                 next();
             });

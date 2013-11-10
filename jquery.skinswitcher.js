@@ -40,6 +40,7 @@
         this._defaults = defaults;
         this._name = pluginName;
         this.init();
+        return element;
     }
 
     Plugin.prototype = {
