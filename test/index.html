@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>jQuery Skinswitcher Test Suite</title>
+    <link rel="stylesheet" href="resources/qunit.css" type="text/css"/>
+    <link rel="stylesheet" href="../jquery.skinswitcher.css" type="text/css"/>
+    <script type="text/javascript" src="resources/jquery.js"></script>
+    <script type="text/javascript" src="resources/jquery.simulate.js"></script>
+    <script type="text/javascript" src="resources/qunit.js"></script>
+    <script type="text/javascript" src="../jquery.skinswitcher.js"></script>
+    <script type="text/javascript" src="test.js"></script>
+</head>
+<body>
+    <h1 id="qunit-header">Core Tests</h1>
+    <h2 id="qunit-banner"></h2>
+    <h2 id="qunit-userAgent"></h2>
+    <ol id="qunit-tests"></ol>
+
+    <div id="main" style="position: absolute; top: -10000px; left: -10000px">
+        <div>
+            <div class="dropdown" id="Skinswitcher">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-eye"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" data-filename="../skins/blue.css"><span class="skincolor-blue"></span> Blue</a></li>
+                    <li><a href="#" data-filename="../skins/white.css"><span class="skincolor-white"></span> White</a></li>
+                    <li><a href="#" data-filename="../skins/no-skin.css"><i class="skincolor-none"></i> None</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
