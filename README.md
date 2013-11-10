@@ -2,7 +2,7 @@
 
 A plugin to ease the switching of skins on a website by the user.
 
-Please visit http://cleentfaar.github.com/jquery-skinswitcher/ for Documentation, Examples
+Please visit http://github.com/cleentfaar/jquery-skinswitcher/ for Documentation, Examples
 and Getting Started information.
 
 ## Release History
