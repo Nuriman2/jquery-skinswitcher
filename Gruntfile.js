@@ -121,7 +121,8 @@ module.exports = function(grunt) {
           globals: {
             jQuery: false,
             LazyLoad: false,
-            ok: false
+            ok: false,
+            console: true
           }
         },
         files: {
