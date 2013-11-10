@@ -165,17 +165,6 @@ module.exports = function(grunt) {
       all: {
         options: {
           urls: [
-            // 'http://localhost:8000/test/index.html?jquery=1.3.2',
-            // 'http://localhost:8000/test/index.html?jquery=1.4.2',
-            'http://localhost:8000/test/index.html?jquery=1.4.3',
-            'http://localhost:8000/test/index.html?jquery=1.5.1',
-            'http://localhost:8000/test/index.html?jquery=1.6.2',
-            'http://localhost:8000/test/index.html?jquery=1.6.4',
-            'http://localhost:8000/test/index.html?jquery=1.7.1',
-            'http://localhost:8000/test/index.html?jquery=1.7.2',
-            'http://localhost:8000/test/index.html?jquery=1.8.3',
-            'http://localhost:8000/test/index.html?jquery=1.9.0',
-            'http://localhost:8000/test/index.html?jquery=1.9.1',
             'http://localhost:8000/test/index.html?jquery=1.10.1',
             'http://localhost:8000/test/index.html?jquery=1.10.2',
             'http://localhost:8000/test/index.html?jquery=2.0.0',
