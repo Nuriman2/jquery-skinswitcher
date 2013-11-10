@@ -1,8 +1,0 @@
-/**
- * This stylesheet represents WHITE colors being applied to the template
- * A variation of these files (in different colors) work well with the Skinswitcher Jquery plugin
- */
-body,a {
-    background-color:blue;
-    color:white;
-}
