@@ -19,7 +19,7 @@
 }
 
 .side-nav > li.dropdown > ul.dropdown-menu > li > a:hover,
-.side-nav > li.dropdown > ul.dropdown-menu > li > a.active,
+.side-nav > li.dropdown > ul.dropdown-menu > li > a:active,
 .side-nav > li.dropdown > ul.dropdown-menu > li > a:focus,
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
