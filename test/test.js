@@ -1,5 +1,5 @@
 /*global module, test, expect */
-/*global ok, equal, deepEqual, start, stop */
+/*global ok, start, stop */
 
 /**
  * ======== A Handy Little QUnit Reference ========
@@ -23,7 +23,6 @@
 (function($) {
     $(function() {
         var system = $({}),
-            delay = 100, // ms
             teardown;
 
         teardown = function() {
@@ -66,7 +65,6 @@
         test('opened/closed', function() {
             var skinswitcher = $('#Skinswitcher').skinswitcher(),
                 instance = skinswitcher.skinswitcher(),
-                selected = null,
                 expected = 8;
 
             expect(expected);
