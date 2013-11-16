@@ -1,5 +1,5 @@
-/*global module, test, expect */
-/*global ok, start, stop */
+/*global module, test */
+/*global ok */
 
 /**
  * ======== A Handy Little QUnit Reference ========
@@ -22,8 +22,7 @@
 /* jQuery Skinswitcher Tests */
 (function($) {
     $(function() {
-        var system = $({}),
-            teardown;
+        var teardown;
 
         teardown = function() {
             var instance = $.data($('#Skinswitcher'), 'plugin_skinswitcher');
