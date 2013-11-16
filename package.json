@@ -2,7 +2,7 @@
     "name": "jquery-skinswitcher",
     "title": "jQuery Skinswitcher",
     "description": "A plugin to ease the switching of skins on a website by the user.",
-    "version": "0.1.0",
+    "version": "1.0.1",
     "homepage": "http://github.com/cleentfaar/jquery-skinswitcher/",
     "author": {
         "name": "Cas Leentfaar",

@@ -1,0 +1,15 @@
+{
+    "name": "cleentfaar/jquery-skinswitcher",
+    "license": "MIT & GPL",
+    "type": "library",
+    "title": "jQuery Skinswitcher",
+    "keywords": [ "skinswitcher", "dropdown", "jquery" ],
+    "description": "A plugin to ease the switching of skins on a website by the user.",
+    "version": "1.0.1",
+    "homepage": "http://github.com/cleentfaar/jquery-skinswitcher/",
+    "author": {
+        "name": "Cas Leentfaar",
+        "email": "info@casleentfaar.com",
+        "url": "http://casleentfaar.com"
+    }
+}

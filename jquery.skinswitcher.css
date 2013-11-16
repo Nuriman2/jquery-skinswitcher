@@ -6,45 +6,6 @@
  *
  * Copyright (c) 2013 Cas Leentfaar; Licensed MIT, GPL
  */
-
-/**
- * First, reset any available Bootstrap skinning, in other words making them as white/transparent as possible
- */
-.navbar {
-    border-color: transparent;
-}
-
-.navbar-inverse .navbar-brand:hover {
-    color: #999999;
-}
-
-.side-nav > li.dropdown > ul.dropdown-menu > li > a:hover,
-.side-nav > li.dropdown > ul.dropdown-menu > li > a:active,
-.side-nav > li.dropdown > ul.dropdown-menu > li > a:focus,
-.navbar-inverse .navbar-nav > .open > a,
-.navbar-inverse .navbar-nav > .open > a:hover,
-.navbar-inverse .navbar-nav > .open > a:focus,
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:focus,
-.navbar-inverse .navbar-nav > li > a:active {
-    color: #000;
-    background-color: transparent;
-}
-
-.navbar-inverse .navbar-nav > .dropdown > a:hover .caret {
-    border-top-color: #999999;
-    border-bottom-color: #999999;
-}
-
-.navbar-inverse .navbar-nav > .open > a:hover .caret,
-.navbar-inverse .navbar-nav > .open > a:focus .caret {
-    border-top-color: #999999;
-    border-bottom-color: #999999;
-}
-
-/**
- * Now for some plugin specific styling...
- */
 .skinswitcher .skincolor-blue,
 .skinswitcher .skincolor-white,
 .skinswitcher .skincolor-none {
