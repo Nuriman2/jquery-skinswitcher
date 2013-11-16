@@ -31,15 +31,6 @@
                 instance.destroy();
             }
         };
-        module('Skinswitcher Options', { teardown: teardown });
-
-        test('children', function() {
-            $('#Skinswitcher').skinswitcher({
-                'children': 'div a'
-            });
-            var instance = $.data($('#Skinswitcher'), 'plugin_skinswitcher');
-            ok(instance.settings.children === 'div a', 'children selector was properly set to "div a".');
-        });
 
     });
 })(jQuery);
