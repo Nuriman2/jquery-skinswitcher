@@ -1,6 +1,3 @@
-/*global module, test */
-/*global ok */
-
 /**
  * ======== A Handy Little QUnit Reference ========
  * http://docs.jquery.com/QUnit
